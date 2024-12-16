@@ -17,20 +17,15 @@
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const code = urlParams.get("code");
+        const playlistsId = urlParams.get("playlists_id");
 
-        if (code) {
-            // Envoie une requête POST avec le code vers le backend
-            fetch("https://playlist-to-osu.onrender.com/spotify-callback", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ code: code }) // Envoie le code dans le corps de la requête
-            })
+        if (playlistsId) {
+            // Envoie une requête pour récupérer les playlists avec l'identifiant
+            fetch(`https://playlist-to-osu.onrender.com/api/spotify-playlists?playlistsId=${playlistsId}`)
                 .then(response => response.json())
                 .then(data => {
-                    console.log("Playlists:", data.items); // Affiche les playlists dans la console
+                    console.log("Playlists:", data); // Affiche les playlists dans la console
+                    displayPlaylists(data); // Affiche les playlists dans la page
                 })
                 .catch(error => console.error("Error fetching playlists:", error));
         }
