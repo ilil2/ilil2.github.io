@@ -20,7 +20,7 @@
         const playlistsId = urlParams.get("playlistsId");
         let hasExecuted = false;
 
-        if (playlistsId && !hasExecuted) {
+        /*if (playlistsId && !hasExecuted) {
             // Envoie une requête pour récupérer les playlists avec l'identifiant
             fetch(`https://playlist-to-osu.onrender.com/api/spotify-playlists?playlistsId=${playlistsId}`)
                 .then(response => response.json())
@@ -30,7 +30,7 @@
                 })
                 .catch(error => console.error("Error fetching playlists:", error));
             hasExecuted = true;
-        }
+        }*/
 
         function displayPlaylists(playlists) {
             const container = document.getElementById("playlists");
