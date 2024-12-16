@@ -17,16 +17,14 @@
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const code = urlParams.get("code");
+        const data = urlParams.get("data");
 
-        if (code) {
-            fetch("https://playlist-to-osu.onrender.com/spotify-callback?code=" + code)
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    displayPlaylists(data.items);
-                })
-                .catch(error => console.error("Error fetching playlists:", error));
+        if (data) {
+            const parsedData = JSON.parse(decodeURIComponent(data));
+
+            console.log("Data received:", parsedData);
+
+            console.log("Playlists:", parsedData.items);
         }
 
         function displayPlaylists(playlists) {
