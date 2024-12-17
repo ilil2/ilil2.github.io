@@ -47,7 +47,10 @@ document.addEventListener("DOMContentLoaded", function() {
             spotify_logo.src = "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
             button.appendChild(spotify_logo);
 
-            button.textContent = "view in Spotify";
+            const buttonText = document.createElement("span");
+            buttonText.textContent = "View in Spotify";
+            button.appendChild(buttonText);
+
             button.onclick = function () {
                 window.open(playlist.external_urls.spotify, '_blank');
             };
