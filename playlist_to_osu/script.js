@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const img = document.createElement("img");
             img.src = playlist.images[0].url;
-            img.width = 180;
-            img.height = 180;
+            img.width = 190;
+            img.height = 190;
 
             const txt = document.createElement("p");
             txt.textContent = playlist.name;
