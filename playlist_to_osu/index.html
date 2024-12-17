@@ -35,7 +35,7 @@
                 // Charge les données à partir de sessionStorage si elles sont déjà présentes
                 const cachedData = JSON.parse(sessionStorage.getItem("playlistsData"));
                 console.log("Cached Playlists:", cachedData);
-                displayPlaylists(cachedData); // Affiche les playlists dans la page
+                displayPlaylists(cachedData.items); // Affiche les playlists dans la page
             }
 
             hasExecuted = true;
