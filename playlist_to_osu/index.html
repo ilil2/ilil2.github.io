@@ -27,7 +27,7 @@
                     .then(data => {
                         console.log("Playlists:", data); // Affiche les playlists dans la console
                         sessionStorage.setItem("playlistsData", JSON.stringify(data)); // Stocke les données dans sessionStorage
-                        displayPlaylists(data); // Affiche les playlists dans la page
+                        displayPlaylists(data.items); // Affiche les playlists dans la page
                     })
                     .catch(error => console.error("Error fetching playlists:", error));
             }
@@ -45,7 +45,7 @@
 
         function displayPlaylists(playlists) {
             const container = document.getElementById("playlists");
-            container.innerHTML = ""; // Nettoie le conteneur avant d'afficher
+            container.innerHTML = "";
             playlists.forEach(playlist => {
                 const div = document.createElement("div");
                 div.textContent = playlist.name;
