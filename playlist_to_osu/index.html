@@ -18,7 +18,7 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const playlistsId = urlParams.get("playlistsId");
-        let hasExecuted = sessionStorage.getItem("hasExecuted") === "true";
+        let hasExecuted = true;
 
         if (playlistsId && !hasExecuted) {
             if (!sessionStorage.getItem("playlistsData")) {
@@ -38,7 +38,7 @@
                 displayPlaylists(cachedData); // Affiche les playlists dans la page
             }
 
-            sessionStorage.setItem("hasExecuted", "true");
+            hasExecuted = false;
             urlParams.delete("playlistsId");
             window.location.href = "ilil2.github.io/playlist_to_osu"
         }
