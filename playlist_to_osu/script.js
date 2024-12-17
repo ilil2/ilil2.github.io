@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
             button.className = "spotify-btn";
 
             const spotify_logo = document.createElement("img");
-            img.src = "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
+            spotify_logo.src = "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
             button.appendChild(spotify_logo);
 
             button.textContent = "view in Spotify";
