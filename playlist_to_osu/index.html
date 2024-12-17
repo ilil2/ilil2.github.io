@@ -5,16 +5,22 @@
     <title>Playlist to OSU!</title>
 
     <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Playlist to OSU!</h1>
 
     <div class="music-app">
-        <button onclick="window.location.href='https://playlist-to-osu.onrender.com/auth/spotify'">Se connecter avec Spotify</button>    </div>
+        <h4 class="div-title">Music app</h4>
+        <button class="spotify-btn" onclick="window.location.href='https://playlist-to-osu.onrender.com/auth/spotify'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Logo" />
+            Se connecter avec Spotify
+        </button>
+    </div>
     <div class="osu">
 
     </div>
 
-    <div id="playlists"></div>
+    <div id="playlists" class="playlists"></div>
 </body>
 </html>

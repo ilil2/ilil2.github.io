@@ -30,6 +30,7 @@ function displayPlaylists(playlists) {
     container.innerHTML = "";
     playlists.forEach(playlist => {
         const div = document.createElement("div");
+        div.className = "play";
         div.textContent = playlist.name;
         container.appendChild(div);
     });
