@@ -31,8 +31,21 @@ function displayPlaylists(playlists) {
     playlists.forEach(playlist => {
         const div = document.createElement("div");
         div.className = "play";
-        div.textContent = playlist.name;
 
+        const img = document.createElement("img");
+        img.scr = playlist.images[2];
+
+        const txt = document.createElement("p");
+        txt.text = playlist.name;
+
+        const button = document.createElement("button");
+        button.onclick = function() {
+            window.open(playlist.external_urls.spotify, '_blank');
+        };
+
+        div.appendChild(img);
+        div.appendChild(txt);
+        div.appendChild(button);
         container.appendChild(div);
     });
     const clearDiv = document.createElement('div');
