@@ -33,17 +33,15 @@ document.addEventListener("DOMContentLoaded", function() {
             div.className = "play";
 
             const img = document.createElement("img");
-            if (playlist.images[2]) {
-                img.src = playlist.images[2].url;
-            }
-            else {
-                img.src = playlist.images[0].url;
-            }
+            img.src = playlist.images[0].url;
+            img.width = 150;
+            img.height = 150;
 
             const txt = document.createElement("p");
-            txt.text = playlist.name;
+            txt.textContent = playlist.name;
 
             const button = document.createElement("button");
+            button.textContent = "view in Spotify";
             button.onclick = function () {
                 window.open(playlist.external_urls.spotify, '_blank');
             };
