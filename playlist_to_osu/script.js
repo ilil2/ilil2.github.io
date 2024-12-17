@@ -32,6 +32,10 @@ function displayPlaylists(playlists) {
         const div = document.createElement("div");
         div.className = "play";
         div.textContent = playlist.name;
+
         container.appendChild(div);
     });
+    const clearDiv = document.createElement('div');
+    clearDiv.classList.add('clear');
+    container.appendChild(clearDiv);
 }
