@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
             div.className = "play";
 
             const img = document.createElement("img");
-            img.src = playlist.images[2];
+            img.src = playlist.images[2].url;
 
             const txt = document.createElement("p");
             txt.text = playlist.name;
