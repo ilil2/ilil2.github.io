@@ -34,13 +34,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const img = document.createElement("img");
             img.src = playlist.images[0].url;
-            img.width = 150;
-            img.height = 150;
+            img.width = 180;
+            img.height = 180;
 
             const txt = document.createElement("p");
             txt.textContent = playlist.name;
 
             const button = document.createElement("button");
+            button.className = "spotify-btn";
             button.textContent = "view in Spotify";
             button.onclick = function () {
                 window.open(playlist.external_urls.spotify, '_blank');
