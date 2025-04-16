@@ -1,0 +1,79 @@
+body {
+    background-color: #eeeeee;
+}
+
+.dark-theme {
+    background-color: #111111;
+    color: white;
+}
+
+.my-card {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-top: 5vh;
+    background-color: #d9d9d9;
+}
+
+.dark-theme .my-card {
+    background-color: #545454;
+}
+
+.my-card h4 {
+    text-align: center;
+}
+
+.my-card p {
+    text-align: justify;
+    margin-left: 5px;
+}
+
+.my-card li {
+    margin-right: 5px;
+}
+
+
+
+
+
+#toggle-theme {
+    display: none;
+}
+
+/* Le slider */
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    transition: background-color 0.4s;
+    cursor: pointer;
+}
+
+/* Le rond intérieur (le "bouton" qui glisse) */
+.slider::before {
+    content: "☀️";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Quand le bouton est coché */
+#toggle-theme:checked + .slider {
+    background-color: #444;
+}
+
+#toggle-theme:checked + .slider::before {
+    transform: translateX(30px);
+    content: "🌙";
+}
